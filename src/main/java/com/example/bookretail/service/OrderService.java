@@ -49,7 +49,6 @@ public class OrderService {
         newOrder.setTotalAmount(book.getPrice().multiply(new BigDecimal(request.getBookCount())));
         newOrder.setMonth(newOrder.getOrderDate().getMonthValue());
         orderRepository.save(newOrder);
-        customer.addOrder(newOrder);
         customerService.saveCustomer(customer);
         return newOrder;
     }

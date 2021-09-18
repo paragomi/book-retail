@@ -19,18 +19,4 @@ public class Customer  {
     private String email;
     private List<Order> orders;
 
-    public Customer(String firstName, String lastName, String email) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.email = email;
-    }
-
-    public void addOrder(Order order){
-        if (orders == null){
-            orders = new ArrayList<>();
-        }
-        orders.add(order);
-    }
-
-
 }
